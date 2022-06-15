@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import site.metacoding.restdoc.domain.User;
 
+// save -> post
+// deleteById -> delete
+// updateById -> put
+// findById -> get
+// findAll -> get
 @RequestMapping("/api") // 이 컨트롤러 진입하려면 무조건 앞에 /api들어와야함
 @RestController
 public class UserApiController {

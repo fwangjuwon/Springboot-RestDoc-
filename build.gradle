@@ -39,11 +39,16 @@ test {
     useJUnitPlatform()
 }
 
+
+
 asciidoctor {
     dependsOn test
      inputs.dir snippetsDir
 }
 
+asciidoctor.doFirst {
+    delete file('build/generated-snippets')
+}
 
 bootJar {
     dependsOn asciidoctor
