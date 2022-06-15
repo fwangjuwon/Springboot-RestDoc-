@@ -46,10 +46,6 @@ asciidoctor {
      inputs.dir snippetsDir
 }
 
-asciidoctor.doFirst {
-    delete file('build/generated-snippets')
-}
-
 bootJar {
     dependsOn asciidoctor
     copy {
